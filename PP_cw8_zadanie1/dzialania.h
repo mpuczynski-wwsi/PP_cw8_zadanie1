@@ -16,5 +16,6 @@ int wyznacz_min(int *a, int n);
 double wyznacz_min(double *a, int n);
 bool jest_arytmetyczny(int* a, int n);
 bool jest_arytmetyczny(double* a, int n, double eps);
-//bool jest_arytmetyczny(double* a, int n, double eps);
+int wyznacz_max(int* a, int n);
+double wyznacz_max(double* a, int n);
 

@@ -56,6 +56,12 @@ int main() {
 		cout << "wartosc " << szukana << " jest na pozycji " << indeks;
 
 
+	cout << "\nWaroscia minimalna calkowita jest: " << wyznacz_min(ti, n);
+	cout << "\nWaroscia maksymalna calkowita jest: " << wyznacz_max(ti, n);
+
+	cout << "\nWaroscia minimalna rzeczywista jest: " << wyznacz_min(td, n);
+	cout << "\nWaroscia maksymalna rzeczywista jest: " << wyznacz_max(td, n);
+
 
 	drukuj_tablice(ti, n);
 	if (jest_arytmetyczny(ti, n)) {

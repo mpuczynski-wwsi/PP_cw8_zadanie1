@@ -132,3 +132,23 @@ bool jest_arytmetyczny(double* a, int n, double eps) {
 	}
 	return true;
 }
+
+int wyznacz_max(int* a, int n) {
+	int max = a[0];
+	for (int i = 1; i < n; i++) {
+		if (a[i] > max) {
+			max = a[i];
+		}
+	}
+	return max;
+}
+
+double wyznacz_max(double* a, int n) {
+	double max = a[0];
+	for (int i = 1; i < n; i++) {
+		if (a[i] < max) {
+			max = a[i];
+		}
+	}
+	return max;
+}
