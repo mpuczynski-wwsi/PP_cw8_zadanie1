@@ -122,10 +122,10 @@ bool jest_arytmetyczny(int* a, int n) {
 }
 
 bool jest_arytmetyczny(double* a, int n, double eps) {
-	int r = a[1] - a[0];
+	double r = a[1] - a[0];
 	for (int i = 2; i < n; i++) {
-		int r2 = a[i] - a[i - 1];
-		if ((r2 - r) <= eps) {
+		double r2 = a[i] - a[i - 1];
+		if ((r2 - r) > eps) {
 			return false;
 			break;
 		}
