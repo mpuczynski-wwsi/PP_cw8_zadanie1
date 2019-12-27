@@ -28,6 +28,12 @@ int main() {
 	else
 		cout << "\nciag liczb w tablicy nie jest scisle rosnacy";
 
+	if (jest_scisle_malejacy(ti, n)) {
+		cout << "\nciag liczb w tablicy jest scisle malejacy";
+	}
+	else
+		cout << "\nciag liczb w tablicy nie jest scisle malejacy";
+
 
 	drukuj_tablice(td, n);
 	if (jest_scisle_rosnacy(td, n)) {
@@ -35,6 +41,13 @@ int main() {
 	}
 	else
 		cout << "\nciag liczb w tablicy nie jest scisle rosnacy";
+
+	if (jest_scisle_malejacy(td, n)) {
+		cout << "\nciag liczb w tablicy jest scisle malejacy";
+	}
+	else
+		cout << "\nciag liczb w tablicy nie jest scisle malejacy";
+
 	int szukana_i;
 	cout << "\npodaj wartosc calkowita szukana: ";
 	cin >> szukana_i;
@@ -76,5 +89,12 @@ int main() {
 	}
 	else
 		cout << "\nciag liczb w tablicy nie jest artmetyczny";
+
+	cout << "\nciag liczb w tablicy posortowany niemalejaco";
+	drukuj_tablice(sortuj_niemalejaco(ti, n), n);
+	cout << "\nciag liczb w tablicy posortowany nierosnaco";
+	drukuj_tablice(sortuj_nierosnaco(ti, n), n);
+
+
 
 }

@@ -152,3 +152,70 @@ double wyznacz_max(double* a, int n) {
 	}
 	return max;
 }
+
+bool jest_scisle_malejacy(int* a, int n) {
+	for (int i = 1; i < n; i++) {
+		if (a[i - 1] <= a[i]) { //czy nastepnik jest mniejszy od poprzednika
+			return false;
+		}
+	}
+	return true;
+}
+bool jest_scisle_malejacy(double* a, int n) {
+	for (int i = 1; i < n; i++) {
+		if (a[i - 1] <= a[i]) { //czy nastepnik jest mniejszy od poprzednika
+			return false;
+		}
+	}
+	return true;
+}
+
+int* sortuj_niemalejaco(int* a, int n) {
+	int i, j, minIndeks, tmp;
+	for (i = 0; i < n - 1; i++) {
+		minIndeks = i;
+
+		for (j = i + 1; j < n; j++) {
+			if (a[j] < a[minIndeks]) {
+				minIndeks = j;
+			}
+		}
+
+		if (minIndeks != i) {
+			tmp = a[i];
+			a[i] = a[minIndeks];
+			a[minIndeks] = tmp;
+		}
+	}
+	return a;
+}
+
+int* sortuj_nierosnaco(int* a, int n) {
+	int i, j, maxIndeks, tmp;
+	for (i = 0; i < n - 1; i++) {
+		maxIndeks = i;
+
+		for (j = i + 1; j < n; j++) {
+			if (a[j] > a[maxIndeks]) {
+				maxIndeks = j;
+			}
+		}
+
+		if (maxIndeks != i) {
+			tmp = a[i];
+			a[i] = a[maxIndeks];
+			a[maxIndeks] = tmp;
+		}
+	}
+	return a;
+
+}
+
+int wartosc_wielomianu(int* a, int n, int x) {
+	int suma = 0;
+	for (int i = n; i > 0; i--) {
+		suma += a[n - 1] * pow(x, i);
+	}
+	return suma;
+}
+
