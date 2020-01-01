@@ -95,6 +95,10 @@ int main() {
 	cout << "\nciag liczb w tablicy posortowany nierosnaco";
 	drukuj_tablice(sortuj_nierosnaco(ti, n), n);
 
+	int x;
+	cout << "\npodaj wartosc x: ";
+	cin >> x;
+	cout << "\nWaroscia wielomianu dla tablicy ti to: " << wartosc_wielomianu(ti, n, x);
 
 
 }

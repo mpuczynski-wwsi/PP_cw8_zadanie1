@@ -22,5 +22,5 @@ bool jest_scisle_malejacy(int* a, int n);
 bool jest_scisle_malejacy(double* a, int n);
 int* sortuj_niemalejaco(int* a, int n);
 int* sortuj_nierosnaco(int* a, int n);
-int wartosc_wielomianu(int* a, int n);
+int wartosc_wielomianu(int* a, int n, int x);
 
